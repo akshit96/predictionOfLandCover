@@ -134,9 +134,6 @@ def get_base_tuple(path , currentyear , baseyear):
 	leave = 0 
 	for x in range(width):
 	    for y in range(height):
-	    	# if(pix[x,y][0]+ pix[x,y][1] + pix[x,y][2] == 17):
-	    	# 	print pix[x,y]
-	    	# 	break 
 	    	if pix[x,y][0] > 150:
 	    		soil = soil + 1
 	    	elif pix[x,y][1] > 150:
@@ -149,8 +146,6 @@ def get_base_tuple(path , currentyear , baseyear):
 	    		leave = leave + 1
 
 	tot = width*height - leave
-	# print tot
-	# print leave
 	soil = ((1.0*soil)/ (tot*1.0) )*100.0
 	water = ((1.0*water)/ (tot*1.0) )*100.0
 	vegetation = ((1.0*vegetation)/ (tot*1.0) )*100.0
@@ -197,14 +192,6 @@ def train():
 	else:
 		xt = x.transpose()
 
-	print 'x shape = ' , x.shape
-	print 'y shape = ' , y.shape
-	print 'xt shape ' , xt.shape
-	print "y = \n" 
-	print y
-	# print x
-	# print xt
-	# print k
 	print x.shape
 	print xt.shape
 
@@ -217,16 +204,7 @@ def train():
 	print xinv.shape
 	print 'theta shape = ' ,theta.shape
 	return theta
-	# prediction = np.dot(x,theta.transpose())
-	# print "@@\n"
-	# print prediction
-	# xx = [1 ,40,20,20,20,6]
-	# xxx = np.array(xx) 
-	# print "x = \n"
-	# print x
-	# print "theta = \n"
-	# print theta
-	# return theta
+
 
 def predict(pwin , ep ,theta):
 	if(ep.get() == ''):
@@ -261,9 +239,6 @@ def main():
 	l2 = Label(top , text = "Enter Year 2 : ")
 
 	cnt = 0
-
-	# e1.grid(row = 50 , coloumn = 200)
-	# e2.grid(row = 70 , column = 200)
 
 	l1.grid(row = 50 , column = 0)
 	l2.grid(row = 70 , column = 0)
@@ -320,12 +295,6 @@ def main():
 
 	pwin.mainloop()
 
-
-
-
-	# global gbase
-	# gtup[5] = currentYear - gbase
-	# xx = np.array(gtup)
 
 if __name__ == "__main__" :
 	main()
