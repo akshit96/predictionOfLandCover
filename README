@@ -1,0 +1,21 @@
+This repo contains , the project that I worked on during Summers 2016 at Bhaskaracharya Institute For Space Applications and Geo-Informatics.
+Project Objective : Prediction of Land Use and Land Cover
+Tools Used : QGIS , Python3
+Description : The algorithm uses basic linear regression to Predict "Vegetation , Soil , Water , BuildUp" in any given year in future , given its trained properly
+Each Training set uses 2 training images's data features and their repective years.
+The feature vector contains features namely
+1. Vegetation (of Year1)
+2. Water (of Year 1)
+3. Soil ( of Yeaar 1)
+4. BuildUp(of Year 1)
+5. TimeGap between 2 images who's data has been provide (i.e Year2-Year1)
+Results vector(of traing set) will include :
+1. Vegetation (of Year2)
+2. Water (of Year 2)
+3. Soil ( of Yeaar 2)
+4. BuildUp(of Year 2)
+
+PreProcessing : this is where you'll have to use QGIS for semi automatic classification to get the features required above and put them into files.
+You can read about the same in a short tutorial given in the link given below
+http://semiautomaticclassificationmanual-v4.readthedocs.io/en/latest/Tutorials.html#data
+
